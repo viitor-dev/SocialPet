@@ -4,7 +4,7 @@ body {
     font-family: 'Outfit';
     font-style: normal;
     background: #FFF0B7;
-    
+    overflow: hidden;
 }
 
 .main-login{
