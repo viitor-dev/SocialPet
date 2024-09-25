@@ -1,3 +1,3 @@
 function redirecionarCadastro() {
-    window.location.href = "./js/index.js"
+    window.location.href = "/docs/cadastro.html"
 }
