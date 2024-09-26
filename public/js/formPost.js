@@ -9,21 +9,21 @@ export class formPost {
     onSubmit(func){
         this.form.addEventListener('submit',func)
     }
-
+    /*Validação de campo de texto vazio ou menor que 3*/
     formValidate(value){
         if(value == "" || value == null || value == undefined || value.length <3){
             return false
         }
         return true
     }
-
+    /*função para obter a data atual*/ 
     getTime(){
         const time = new Date();
         const hour = time.getHours();
         const minutes = time.getMinutes();
         return `${hour}h ${minutes}min`
     }
-
+    /*FUNÇÃO PARA O BOTÃO PUBLICAR (BOTÃO SUBMIT)*/
     addSubmit(){
         const handleSubmit = (event) => {
             event.preventDefault();
@@ -31,6 +31,7 @@ export class formPost {
                 const time = this.getTime();
                 const newPost = document.createElement('li');
                 newPost.classList.add('post');
+                /*CONTEÚDO DA POSTAGEM DINÂMICA*/
                 newPost.innerHTML = `
 
                 <div class="info-user-post">
@@ -42,7 +43,7 @@ export class formPost {
                     <p>${time}</p>
                     </div>
                 </div>
-
+                
                 <p>
                     ${this.textarea.value}
                 </p>
@@ -65,6 +66,7 @@ export class formPost {
             this.textarea.value="";
 
             }
+            /*ALERTA PARA CAMPO VAZIO OU < 3 LINHAS*/
             else {
                 alert('Verifique o campo digitado.')
             }

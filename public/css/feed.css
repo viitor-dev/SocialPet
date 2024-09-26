@@ -6,13 +6,43 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-header{
+/*CABEÇALHO*/
+header{ 
+    
     margin: 0;
     padding: 15px  25px;
     background: #fbf3d3 ;
     box-shadow: 0 0 10px black;
+    position: sticky;
+    top: 0;
+    background-color: #fbf3d3;
+    padding: 20px;
+    justify-content: center;
 
 }
+
+/*INÍCIO MENU DE NAVEGAÇÃO*/
+header nav.navMenu{
+    position:absolute;
+    top: 28px;
+    right: 20px;
+    padding: 15px 12px;
+    border-radius:10px;
+}
+/*BOTÕES DO MENU DE NAVEGAÇÃO*/
+header nav.navMenu a{
+    background-color: #EC9A48;
+    padding: 4px;
+    border-radius: 5px;
+    color: #fbf3d3;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+header nav.navMenu a:hover {
+    background-color:#ec7f12 ;
+}
+/*FIM MENU DE NAVEGAÇÃO*/
 
 body {
     font-family: 'Outfit';
